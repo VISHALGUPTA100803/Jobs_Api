@@ -7,7 +7,6 @@ const cors = require("cors");
 
 server.use(middlewares);
 server.use(router);
-server.use(cors());
 
 const PORT = process.env.PORT || 3000;
 

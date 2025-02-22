@@ -3,11 +3,10 @@ const server = jsonServer.create();
 const router = jsonServer.router("jobs.json");
 const middlewares = jsonServer.defaults();
 const cors = require("cors");
-
+server.use(cors());
 
 server.use(middlewares);
 server.use(router);
-server.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
